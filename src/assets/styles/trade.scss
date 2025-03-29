@@ -1,0 +1,230 @@
+.trade-page {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    
+    .symbol-selector {
+      padding: var(--padding-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      
+      .current-symbol {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        
+        .symbol-name {
+          font-size: var(--font-size-lg);
+          font-weight: 500;
+          margin-right: var(--padding-xs);
+        }
+        
+        .price {
+          font-size: var(--font-size-md);
+          margin-right: var(--padding-xs);
+        }
+        
+        .van-icon {
+          font-size: 14px;
+          color: var(--text-secondary);
+        }
+      }
+      
+      .price-change {
+        font-size: var(--font-size-md);
+      }
+    }
+    
+    .trade-chart {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--border-color);
+      
+      .chart-header {
+        padding: var(--padding-xs) var(--padding-md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .time-selector {
+          display: flex;
+          overflow-x: auto;
+          
+          .van-button {
+            margin-right: 8px;
+            flex-shrink: 0;
+          }
+        }
+        
+        .chart-tools {
+          .van-icon {
+            font-size: 18px;
+            color: var(--text-secondary);
+            cursor: pointer;
+          }
+        }
+      }
+      
+      .chart-container {
+        flex: 1;
+        min-height: 300px;
+      }
+    }
+    
+    .trade-form {
+      padding: var(--padding-md);
+      
+      .trade-type-selector {
+        display: flex;
+        margin-bottom: var(--padding-md);
+        
+        .van-button {
+          flex: 1;
+          margin-right: 8px;
+          
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      
+      .form-item {
+        margin-bottom: var(--padding-md);
+        
+        label {
+          display: block;
+          font-size: var(--font-size-sm);
+          color: var(--text-secondary);
+          margin-bottom: 4px;
+        }
+      }
+      
+      .amount-slider {
+        margin-bottom: var(--padding-md);
+        
+        .custom-slider-button {
+          width: 40px;
+          height: 20px;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+          color: #ffffff;
+          font-size: var(--font-size-xs);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .slider-marks {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 8px;
+          font-size: var(--font-size-xs);
+          color: var(--text-secondary);
+        }
+      }
+      
+      .trade-info {
+        margin-bottom: var(--padding-md);
+        
+        .info-item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 4px;
+          
+          .label {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+          }
+          
+          .value {
+            font-size: var(--font-size-sm);
+            color: var(--text-color);
+          }
+        }
+      }
+      
+      .trade-action {
+        margin-top: var(--padding-lg);
+      }
+    }
+  }
+  
+  // 交易对选择弹窗样式
+  .symbol-popup {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .popup-header {
+      padding: var(--padding-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      
+      .popup-title {
+        font-size: var(--font-size-lg);
+        font-weight: 500;
+      }
+      
+      .van-icon {
+        font-size: 20px;
+        color: var(--text-secondary);
+        cursor: pointer;
+      }
+    }
+    
+    .symbol-tabs {
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .symbol-list {
+      flex: 1;
+      overflow-y: auto;
+      
+      .symbol-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--padding-md);
+        border-bottom: 1px solid var(--border-color);
+        cursor: pointer;
+        
+        &:active {
+          background-color: var(--bg-dark);
+        }
+        
+        .symbol-info {
+          .symbol-name {
+            font-size: var(--font-size-md);
+            font-weight: 500;
+            color: var(--text-color);
+          }
+          
+          .symbol-fullname {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-top: 2px;
+          }
+        }
+        
+        .symbol-price {
+          text-align: right;
+          
+          .price {
+            font-size: var(--font-size-md);
+            color: var(--text-color);
+          }
+          
+          .price-change {
+            font-size: var(--font-size-sm);
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
